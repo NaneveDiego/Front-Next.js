@@ -17,7 +17,7 @@ export default async function Dashboard() {
     }
   }
   )
- 
+
 
   const posts: Post[] = await data.json()
 

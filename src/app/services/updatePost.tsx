@@ -1,3 +1,5 @@
+import { redirect } from 'next/navigation'
+
 type ActionState = {
     message: string;
     success: boolean;
@@ -27,5 +29,7 @@ type ActionState = {
       return { message: 'Post atualizado com sucesso!', success: true }
     } catch (err) {
       return { message: 'Falha ao atualizar post', success: false }
+    } finally {
+      redirect('/')
     }
   }
